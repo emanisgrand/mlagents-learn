@@ -1,16 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FoodButton : MonoBehaviour
 {
-    bool canUseButton;
-    [SerializeField] Transform buttonTransform;
-    [SerializeField] MeshRenderer buttonMeshRenderer;
+    public event EventHandler OnUsed;
+    
+    
     [SerializeField] Material greenMaterial;
     [SerializeField] Material greenDarkMaterial;
-
     
+    private MeshRenderer buttonMeshRenderer;
+    private Transform buttonTransform;
+    private bool canUseButton;
+
+    private void Awake()
+    {
+        buttonTransform = gameObject.transform;
+        buttonMeshRenderer = buttonTransform.GetComponent<MeshRenderer>();
+        canUseButton = true;
+    }
+
+    private void Start()
+    {
+        ResetButton();
+    }
+
+    public bool CanUseButton()
+    {
+        return canUseButton;
+    }
 
     public void UseButton()
     {
@@ -19,13 +39,17 @@ public class FoodButton : MonoBehaviour
             buttonMeshRenderer.material = greenDarkMaterial;
             buttonTransform.localScale = new Vector3(.5f, .2f, .5f);
             canUseButton = false;
+
+            OnUsed?.Invoke(this, EventArgs.Empty);
         }
     }
+
+    
 
     public void ResetButton()
     {
         buttonMeshRenderer.material = greenMaterial;
-        buttonTransform.localScale = new Vector3(.5f, .5f, .5f);
+        transform.localScale = new Vector3(.5f, .5f, .5f);
 
         transform.localPosition =
             new Vector3(

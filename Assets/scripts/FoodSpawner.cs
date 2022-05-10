@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class FoodSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool hasSpawnedFood;
+    Transform foodTransform;
+
+    public bool HasSpanwedFood()
     {
-        
+        return hasSpawnedFood;
     }
 
-    // Update is called once per frame
-    void Update()
+    public Transform GetLastFoodTransform()
     {
+        return foodTransform;
         
     }
 }
