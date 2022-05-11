@@ -7,29 +7,22 @@ public class FoodButton : MonoBehaviour
 {
     public event EventHandler OnUsed;
     
-    
     [SerializeField] Material greenMaterial;
     [SerializeField] Material greenDarkMaterial;
+    [SerializeField] Transform buttonTransform; // being used to access the mesh renderer.
     
     private MeshRenderer buttonMeshRenderer;
-    private Transform buttonTransform;
     private bool canUseButton;
+    public bool CanUseButton()
+    {
+        return canUseButton;
+    }
 
     private void Awake()
     {
         buttonTransform = gameObject.transform;
         buttonMeshRenderer = buttonTransform.GetComponent<MeshRenderer>();
         canUseButton = true;
-    }
-
-    private void Start()
-    {
-        ResetButton();
-    }
-
-    public bool CanUseButton()
-    {
-        return canUseButton;
     }
 
     public void UseButton()
@@ -46,14 +39,13 @@ public class FoodButton : MonoBehaviour
 
     
 
-    public void ResetButton()
+    public void ResetButton()  
     {
         buttonMeshRenderer.material = greenMaterial;
         transform.localScale = new Vector3(.5f, .5f, .5f);
-
         transform.localPosition =
             new Vector3(
-                transform.localPosition.x, transform.localPosition.y, UnityEngine.Random.Range(-3, 4));
+                transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
 
         canUseButton = true;
     }

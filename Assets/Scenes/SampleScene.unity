@@ -10104,9 +10104,14 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &1300926777 stripped
+--- !u!4 &1300926779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6084285291098122308, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+  m_PrefabInstance: {fileID: 1809453460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1300926783 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 772302715802902669, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7529769039733009403, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
   m_PrefabInstance: {fileID: 1809453460}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -12956,6 +12961,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 577018033877622917, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+      propertyPath: foodButton
+      value: 
+      objectReference: {fileID: 1300926783}
     - target: {fileID: 823054878652117051, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12987,7 +12996,7 @@ PrefabInstance:
     - target: {fileID: 1212062862265736039, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: foodButton
       value: 
-      objectReference: {fileID: 1300926777}
+      objectReference: {fileID: 1300926783}
     - target: {fileID: 1212062862265736039, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: foodSpawner
       value: 
@@ -13052,6 +13061,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1393078218}
+    - target: {fileID: 3636630948275279123, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+      propertyPath: buttonRef
+      value: 
+      objectReference: {fileID: 1300926783}
+    - target: {fileID: 3636630948275279123, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+      propertyPath: foodButton
+      value: 
+      objectReference: {fileID: 1300926783}
+    - target: {fileID: 4399191755924444574, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399191755924444574, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399191755924444574, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.76
+      objectReference: {fileID: 0}
     - target: {fileID: 4546353556043894123, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13065,8 +13094,12 @@ PrefabInstance:
       value: Environment1
       objectReference: {fileID: 0}
     - target: {fileID: 6084285291098122308, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084285291098122308, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.6062
       objectReference: {fileID: 0}
     - target: {fileID: 6084285291098122308, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: m_LocalScale.y
@@ -13074,16 +13107,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6084285291098122308, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.56363
       objectReference: {fileID: 0}
     - target: {fileID: 6084285291098122308, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36
+      value: 0.562
       objectReference: {fileID: 0}
     - target: {fileID: 6849381238661576206, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 664320866}
+    - target: {fileID: 7529769039733009403, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+      propertyPath: buttonTransform
+      value: 
+      objectReference: {fileID: 1300926779}
     - target: {fileID: 9009570750339769184, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
       propertyPath: m_Model
       value: 
@@ -13114,6 +13151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2293035404244314339, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
+    - {fileID: 3796183098749438797, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f18a383c785c3447845c01dd2f93781, type: 3}
 --- !u!43 &1830121729
 Mesh:
@@ -14235,7 +14273,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!43 &1949773035
 Mesh:

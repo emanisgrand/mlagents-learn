@@ -6,12 +6,11 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 
-public class MoveToGoalAgent : Agent
+public class MoveToGoalAgent : Agent 
 {
     public event EventHandler OnAteFood;
     public event EventHandler OnEpisodeBeginEvent;
 
-    [SerializeField] Transform targetTransform;
     [SerializeField] FoodButton foodButton;
     [SerializeField] FoodSpawner foodSpawner;
 
@@ -30,7 +29,7 @@ public class MoveToGoalAgent : Agent
             new Vector3(
                 UnityEngine.Random.Range(0, -3), 0, UnityEngine.Random.Range(-4.75f, 3.5f)
             );
-
+        foodButton.ResetButton();
         OnEpisodeBeginEvent?.Invoke(this, EventArgs.Empty);
     }
 
@@ -42,11 +41,11 @@ public class MoveToGoalAgent : Agent
         sensor.AddObservation(dirToFoodButton.x);
         sensor.AddObservation(dirToFoodButton.z);
 
-        sensor.AddObservation(foodSpawner.HasSpanwedFood() ? 1 : 0);
+        sensor.AddObservation(foodSpawner.HasSpawnedFood ? 1 : 0);
 
-        if (foodSpawner.HasSpanwedFood())
+        if (foodSpawner.HasSpawnedFood)
         {
-            Vector3 dirToFood = (foodSpawner.GetLastFoodTransform().localPosition - transform.localPosition).normalized;
+            Vector3 dirToFood = (foodSpawner.GetLastTargetPosition().localPosition - transform.localPosition).normalized;
             sensor.AddObservation(dirToFood.x);
             sensor.AddObservation(dirToFood.y);
         } else

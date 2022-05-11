@@ -1,20 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FoodSpawner : MonoBehaviour
 {
-    private bool hasSpawnedFood;
-    Transform foodTransform;
+    public bool HasSpawnedFood { get; private set; }
 
-    public bool HasSpanwedFood()
+    [SerializeField] Transform foodSpawnPos;
+    [SerializeField] GameObject food;
+
+    [SerializeField] FoodButton buttonRef;
+
+    private Transform targetTransform;
+
+    private void Start()
     {
-        return hasSpawnedFood;
+        buttonRef.OnUsed += SpawnFood;
     }
 
-    public Transform GetLastFoodTransform()
+    public void SpawnFood(object sender, EventArgs e) // signature must match.
     {
-        return foodTransform;
-        
+        GameObject.Instantiate(food, foodSpawnPos);
+        targetTransform = food.transform;
+        HasSpawnedFood = true;        
+    }
+
+    public Transform GetLastTargetPosition()
+    {
+        return targetTransform;    
     }
 }
