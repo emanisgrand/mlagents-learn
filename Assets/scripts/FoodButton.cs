@@ -10,7 +10,8 @@ public class FoodButton : MonoBehaviour
     [SerializeField] Material greenMaterial;
     [SerializeField] Material greenDarkMaterial;
     [SerializeField] Transform buttonTransform; // being used to access the mesh renderer.
-    
+    [SerializeField] Transform buttonBase;
+     
     private MeshRenderer buttonMeshRenderer;
     private bool canUseButton;
     public bool CanUseButton()
@@ -43,9 +44,9 @@ public class FoodButton : MonoBehaviour
     {
         buttonMeshRenderer.material = greenMaterial;
         transform.localScale = new Vector3(.5f, .5f, .5f);
-        transform.localPosition =
+        buttonBase.localPosition =
             new Vector3(
-                transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
+                UnityEngine.Random.Range(-3f, 4f), buttonBase.localPosition.y, UnityEngine.Random.Range(-5.2f, 3.7f));
 
         canUseButton = true;
     }

@@ -1829,6 +1829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greenMaterial: {fileID: 2100000, guid: 4d50eef1ba5dff4478d8ee08faea14ee, type: 2}
   greenDarkMaterial: {fileID: 2100000, guid: e196bf7d0fe646f45817e35602a44d43, type: 2}
+  buttonTransform: {fileID: 6084285291098122308}
+  buttonBase: {fileID: 4399191755924444574}
 --- !u!1 &1857320051194251732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +1877,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodSpawnPos: {fileID: 9184458478048667718}
   food: {fileID: 1990308609624112679, guid: 09322656660faa047ba5e9658119ca32, type: 3}
+  buttonRef: {fileID: 7529769039733009403}
+  agentRef: {fileID: 1212062862265736039}
 --- !u!1 &2084085687810144697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,7 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1212062862265736039}
-  foodButton: {fileID: 0}
+  foodButton: {fileID: 7529769039733009403}
   foodSpawner: {fileID: 3636630948275279123}
 --- !u!1001 &206384033149432008
 PrefabInstance:
@@ -2497,6 +2501,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1394552096698560460}
     m_Modifications:
+    - target: {fileID: 1301300526195272623, guid: 96fda09cb1170764aac7fcb7cdc7b52c, type: 3}
+      propertyPath: foodButton
+      value: 
+      objectReference: {fileID: 7529769039733009403}
+    - target: {fileID: 1301300526195272623, guid: 96fda09cb1170764aac7fcb7cdc7b52c, type: 3}
+      propertyPath: foodSpawner
+      value: 
+      objectReference: {fileID: 3636630948275279123}
     - target: {fileID: 1301300526195272623, guid: 96fda09cb1170764aac7fcb7cdc7b52c, type: 3}
       propertyPath: targetTransform
       value: 

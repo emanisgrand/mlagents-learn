@@ -1,0 +1,29 @@
+{
+    "FoodBird": {
+        "checkpoints": [
+            {
+                "steps": 49183,
+                "file_path": "results\\FoodBird0\\FoodBird\\FoodBird-49183.onnx",
+                "reward": 1.2679167604849984,
+                "creation_time": 1652320224.9337578,
+                "auxillary_file_paths": [
+                    "results\\FoodBird0\\FoodBird\\FoodBird-49183.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 49183,
+            "file_path": "results\\FoodBird0\\FoodBird.onnx",
+            "reward": 1.2679167604849984,
+            "creation_time": 1652320224.9337578,
+            "auxillary_file_paths": [
+                "results\\FoodBird0\\FoodBird\\FoodBird-49183.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

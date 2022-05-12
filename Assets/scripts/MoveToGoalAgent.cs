@@ -30,6 +30,7 @@ public class MoveToGoalAgent : Agent
                 UnityEngine.Random.Range(0, -3), 0, UnityEngine.Random.Range(-4.75f, 3.5f)
             );
         foodButton.ResetButton();
+        foodSpawner.HasSpawnedFood = false;
         OnEpisodeBeginEvent?.Invoke(this, EventArgs.Empty);
     }
 
